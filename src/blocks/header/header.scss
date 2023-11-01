@@ -1,0 +1,44 @@
+@import "../../scss/mixins/fluid";
+
+.header {
+  $block-name: &; // #{$block-name}__element
+
+  background: var(--back-transparency);
+  border-bottom: 1px solid var(--border-primary);
+
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    max-width: 1376px;
+    margin: 0 auto;
+    padding: 18px 0 17px;
+
+    @media screen and (min-width: $screen-ti) {
+      padding: 20px 0 19px;
+    }
+  }
+
+  &__menu {
+    padding: 0;
+    border: none;
+
+    @media screen and (min-width: $screen-ti) {
+      display: none;
+    }
+  }
+
+  &__nav-item {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
